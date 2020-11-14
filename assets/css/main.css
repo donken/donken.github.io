@@ -85,6 +85,8 @@
 		width: 1400px;
 	}
 
+
+
 	@media screen and (max-width: 1680px) {
 
 		.container.\31 25\25 {
@@ -2537,9 +2539,23 @@
 					border: 0;
 				}
 
+
+/* Derek edits */
+.unslider {
+    float: right;
+    height: 110%;
+}
+
+
 /* Wide */
 
 	@media screen and (max-width: 1680px) {
+
+		/* Derek edits */
+		.unslider {
+    		float: right;
+            height: 110% ;
+		}
 
 		/* Basic */
 
@@ -2559,6 +2575,12 @@
 /* Normal */
 
 	@media screen and (max-width: 1280px) {
+
+		/* Derek edits */
+		.unslider {
+    		float: right;
+            height: 110%;
+		}
 
 		/* Basic */
 
@@ -2624,6 +2646,11 @@
 /* Narrow */
 
 	@media screen and (max-width: 980px) {
+
+		/* Derek edits */
+		.unslider {
+    		float: right;
+		}
 
 		/* Basic */
 
@@ -2703,7 +2730,13 @@
 		display: none;
 	}
 
-	@media screen and (max-width: 840px) {
+	@media screen and (max-width: 860px) {
+
+
+		/* Derek edits */
+		.unslider {
+    		float: right;
+		}
 
 		/* Basic */
 
@@ -3002,6 +3035,15 @@
 /* Mobile */
 
 	@media screen and (max-width: 736px) {
+
+        /* Derek edits */
+
+        .unslider {
+            height: 70%;
+            float: none;
+
+        }
+
 
 		/* Basic */
 
