@@ -3197,3 +3197,42 @@
 			}
 
 	}
+
+
+/* overwritten for mobile size */
+.unslider {
+    width: 60%;
+    max-width: 800px;
+    min-width: 300px;
+    max-height: 600px;
+    /* float: right; */
+}
+
+
+.my-slider {
+    /* float: right; */
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+
+.my-slider li img {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+
+
+img {
+	opacity: 1;
+	transition: opacity 0.3s;
+}
+
+
+.unslider-nav {
+	display: none;
+}
