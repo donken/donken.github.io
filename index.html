@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="stylesheet" href="assets/css/unslider.css">
 	<link rel="stylesheet" href="assets/css/unslider-dots.css">
+	<link rel="stylesheet" href="assets/css/academicons.min.css"/> <!--google scholar icon-->
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 
 </head>
@@ -24,7 +25,12 @@
 	<!-- Header -->
 	<section id="header">
 		<header>
-			<h1 style="display:inline;" id="logo"><a href="#">Derek Onken</a> </h1> PhD Candidate in Computer Science
+			<h1 style="display:inline;" id="logo"><a href="#">Derek Onken</a> </h1> PhD Candidate &nbsp;
+				<ul class="icons"  style="display:inline;" >
+					<li><a href="https://www.linkedin.com/in/derekonken/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="https://scholar.google.com/citations?user=VqH6AJ8AAAAJ&hl=en" class="ai ai-google-scholar-square ai-1x"></a></li>
+					<li><a href="https://github.com/donken" class="icon brands fa-github"><span class="label">Github</span></a></li>
+				</ul>
 		</header>
 		<nav id="nav">
 			<ul>
@@ -50,7 +56,7 @@
 
 
 					<img align="right" src="images/gallery/OnkenProfile.png" alt="OnkenProfile" width=30% style="max-width:250px; margin:10px" >
-					
+
 					<h3>About</h3>
 
 					
@@ -92,9 +98,10 @@
 					<h3> Research </h3>
 						<p> <b> PDE-based Machine Learning with <a href="http://www.mathcs.emory.edu/~lruthot/" target="_blank"> Lars Ruthotto </a>.</b> (2018 - present)
 						<br/>
-                        Applying knowledge of optimizers and partial differential equation solvers to machine learning architectures (also known as neural differential equations). More specifically, we explore higher-order schemes, bound constraints, and the Discretize-Optimize approach (<a href="https://github.com/EmoryMLIP/DynamicBlocks" target="_blank">public code</a>). We also are interested in developing methods for lowering computational cost of continuous normalizing flows.
+                        Applying knowledge of optimizers and partial differential equation solvers to machine learning architectures (also known as neural differential equations). More specifically, we explore higher-order schemes, applications of optimal control, and the Discretize-Optimize approach . We also are interested in developing methods for lowering computational cost of continuous normalizing flows and tractably solving high-dimensional optimal control problems.
 
-                        <!--More specifically, we ask if current reliance on gradient-based methods necessarily results in the most efficient training, question the stability of presented problems and the ability of current architectures to handle ill-posed problems, and view current architectures from a scientific computing perspective.</p> Most current experiments involve applications of higher-order schemes, bound constraints, and the Discretize-Optimize approach.-->
+                        <!-- 
+                        (<a href="https://github.com/EmoryMLIP/DynamicBlocks" target="_blank">public code</a>) More specifically, we ask if current reliance on gradient-based methods necessarily results in the most efficient training, question the stability of presented problems and the ability of current architectures to handle ill-posed problems, and view current architectures from a scientific computing perspective.</p> Most current experiments involve applications of higher-order schemes, bound constraints, and the Discretize-Optimize approach.-->
 						<p> <b> Parkinson's Disease Telemonitoring and Voice Analysis via Mobile App with <a href="http://www.mathcs.emory.edu/~eugene/" target="_blank"> Eugene Agichtein </a> as part of his  <a href="https://github.com/emory-irlab" target="_blank">IRLAB</a>.</b> (2017)
 						<br/>
 						Collecting and analyzing voice data, touch pressure, and rest tremor to detect Parkinson's disease symptoms via remote patient monitoring. Building machine learning classifier using motor and vocal features extracted from these patients.
@@ -118,10 +125,21 @@
 
 						<b>
 						<h3> Preprints</h3>
-						D Onken, S Wu Fung, X Li, L Ruthotto.
-						OT-Flow: Fast and Accurate Continuous Normalizing Flows via Optimal Transport. 2020. <a href="https://arxiv.org/abs/2006.00104" target="_blank">preprint</a>
+						D Onken, L Nurbekyan, X Li, S Wu Fung, S Osher, L Ruthotto.
+						A Neural Network Approach Applied to Multi-Agent Optimal Control. 2020.</br> 
+						 <a href="https://arxiv.org/abs/2011.04757" target="_blank">paper</a> &nbsp;
+						 <!-- code &nbsp; -->
+						 <a href="https://imgur.com/a/HWqlIot" target="_blank">videos</a>
 						</br> 
-						D Onken and L Ruthotto. Discretize-Optimize vs. Optimize-Discretize for Time-Series Regression and Continuous Normalizing Flows. 2020. <a href="https://arxiv.org/abs/2005.13420" target="_blank">preprint</a> 
+						D Onken, S Wu Fung, X Li, L Ruthotto.
+						OT-Flow: Fast and Accurate Continuous Normalizing Flows via Optimal Transport. 2020.</br> 
+						 <a href="https://arxiv.org/abs/2006.00104" target="_blank">paper</a> &nbsp; 
+						 <a href="https://github.com/EmoryMLIP/OT-Flow" target="_blank">code</a> &nbsp;
+						</br> 
+						D Onken and L Ruthotto. Discretize-Optimize vs. Optimize-Discretize for Time-Series Regression and Continuous Normalizing Flows. 2020.  </br>  
+							<a href="https://arxiv.org/abs/2005.13420" target="_blank">paper</a>  &nbsp;
+							<a href="https://github.com/EmoryMLIP/DOvsOD_NeuralODEs" target="_blank">code</a> &nbsp;
+							<a href="https://imgur.com/nWxwVoe" target="_blank">videos</a>
 						</b>
 
 
