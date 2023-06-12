@@ -1594,8 +1594,13 @@
 		font-weight: 400;
 	}
 
-	p, ul, ol, dl, table, blockquote {
+	ul, ol, dl, table, blockquote {
 		margin: 0 0 2em 0;
+	}
+
+	/* Derek edit */
+	p {
+		margin: 0 0 0 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -1620,6 +1625,11 @@
 	h3 {
 		font-size: 1.15em;
 		letter-spacing: 0.025em;
+	}
+
+	/* Derek edit*/
+	h4 {
+		margin-bottom: 0em;
 	}
 
 	sub {
@@ -2467,7 +2477,7 @@
 		background-position: top left, top right, bottom left, bottom right;
 		background-repeat: no-repeat;
 		background-size: 25em;
-		padding: 7em 0;
+		padding: 6em 0;
 	}
 
 		#main > :last-child {
@@ -2513,7 +2523,7 @@
 	#footer {
 		background: #E8EEF4;
 		color: #7c8081;
-		padding: 5em 5em 10em 5em;
+		padding: 2em 2em 1em 2em;
 		text-align: center;
 	}
 
@@ -2806,9 +2816,9 @@
 
 		/* Header */
 
-			#header {
-				display: none;
-			}
+/*			#header ul li {
+				margin-left: 1em;
+			}*/
 
 		/* Banner */
 
@@ -3034,7 +3044,9 @@
 
 /* Mobile */
 
-	@media screen and (max-width: 736px) {
+	/* Derek edits */
+	/*@media screen and (max-width: 736px) {*/
+	@media screen and (max-width: 675px) {
 
         /* Derek edits */
 
@@ -3068,12 +3080,17 @@
 
 		/* Section/Article */
 
+			/* Derek edits */
+			#header nav {
+				display: none;
+			}
+
 			header {
-				text-align: center;
+				/*text-align: center;*/
 			}
 
 				header.major {
-					padding-bottom: 0;
+					/*padding-bottom: 0;*/
 				}
 
 				header.special {
