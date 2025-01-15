@@ -10,6 +10,33 @@
 
 	<link rel="icon" href="images/DinO.ico"> <!-- browser tab icon -->
 
+  <style>
+      body {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          margin: 0;
+          padding: 0;
+          height: 100vh;
+      }
+      .container {
+          display: flex;
+          flex-direction: row;
+      }
+      .image-container {
+          display: flex;
+          flex-direction: column;
+          margin: 0 10px; /* Add horizontal margin here */
+      }
+      .image-container img {
+          display: block;
+          margin: 0;
+          padding: 0;
+          width: 95%; /* relative width */
+          height: auto; /* Maintain the aspect ratio */
+      }
+  </style>
+
 </head>
 
 <body>
@@ -29,10 +56,7 @@
 		</header>
 		<nav id="nav">
 			<ul>
-				<!--<li><a href="#one" class="active">About</a></li>-->
-				<li><a href="./index.html#two">Research</a></li>
-				<!--<li><a href="#three">Teaching</a></li>-->
-				<!-- <li><a href="#four">Contact</a></li> -->
+				<li><a href="#two">Research</a></li>
 				<li><a href="./OnkenCV.pdf" target="_blank">CV</a></li>
 				<li><a href="./fun.html">Fun Links</a></li>
 			</ul>
@@ -45,24 +69,22 @@
 		<!-- Main -->
 		<div id="main">
 
-			<!-- One -->
-			<section id="one">
-				<div class="container" align=center>
+				<div class="container">
+					<div class="image-container">
+							<par> <a href="https://github.com/donken" class="icon brands fa-github" style="font-size: 1.3em; position: relative; bottom: -1px;" target="_blank" aria-label="link to Github profile"><span class="label">Github</span> donken </a> (personal)</par>
+							<br/>
+	            <img src="./images/github_contributions/contributions-donken-crop-top.png" alt="Top Image">
+	            <img src="./images/github_contributions/contributions-donken-crop-bottom.png" alt="Bottom Image">
+	        </div>
+			    <div class="image-container">
+			    		<par> <a href="https://github.com/donken-lilly" class="icon brands fa-github" style="font-size: 1.3em; position: relative; bottom: -1px;" target="_blank" aria-label="link to Github profile"><span class="label">Github</span> donken-lilly </a> (work)</par>
+			    		<br/>
+			        <img src="./images/github_contributions/contributions-donken-lilly-crop-top.png" alt="Top Image">
+			        <img src="./images/github_contributions/contributions-donken-lilly-crop-bottom.png" alt="Bottom Image">
+			    </div>
+		  	</div>
 
-                    <iframe width="720" height="405" src="https://www.youtube.com/embed/YZRg6h_PgIM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div style="width:80%; text-align:center; max-width:640px;" >  <b> European Control Conference, June 2021</b></div>
-					</br> Accompanying Slides <a href="./2021ECCslides.pdf" target="_blank">link</a>
-					</br> Proceedings <a href="https://doi.org/10.23919/ECC54610.2021.9655103" target="_blank">link</a>
-                    </br>
-                    </br> We extend thanks to Reza Karimi for the audio-visual quality
-
-
-			</section>
-
-		
-
-
-		</div>
+  	</div>
 
 	</div>
 
