@@ -38,25 +38,65 @@
 		  margin-bottom: 0.2em;    /* space below image */
 		}
 
-		/* Calendar styling */
-		#combined-calendar {
-		  overflow-x: auto;       /* horizontal scroll if needed */
-		  padding: 0.1em 0;
-		  width: 100%;            /* match container width */
-		}
-		.calendar-img {
-		  display: block;
-		  width: 300%;            /* scale to container */*/
-/*		  height: auto;*/
-		}
-		.flex {
-		  display: flex;
-		  align-items: flex-start; /* same top height */
-		  gap: 1rem;
-		}
+	    /* Calendar styling */
+	    #combined-calendar {
+	      overflow-x: auto;       /* horizontal scroll if needed */
+	      padding: 0.1em 0;
+	      width: 100%;            /* match container width */
+	    }
+	    .calendar-img {
+	      display: block;
+	      width: 300%;            /* scale to container */
+	      /* height: auto; */
+	    }
 
-		.text { flex: 1; }
-	</style>
+	    /* Make the profile/calendar box float so text wraps around it.
+	       Place a width that fits your layout (adjust as needed). */
+	    .box {
+	      float: right;
+	      width: 320px;
+	      margin: 0 0 1rem 1rem; /* space between floated box and text */
+	    }
+
+	    #profile-calendar-container {
+	      width: 100%;
+	    }
+
+	    .profile-img {
+	      display: block;
+	      max-width: 100%;
+	      height: auto;
+	    }
+
+	    /* Keep the section container as normal flow so wrapping works */
+	    .flex {
+	      display: block;            /* don't use flex; let float wrapping occur */
+	      align-items: unset;
+	      gap: unset;
+	    }
+
+	    /* Ensure the container clears the float after the section */
+	    .container::after {
+	      content: "";
+	      display: table;
+	      clear: both;
+	    }
+
+	    .text {
+	      /* allow the text to flow around the floated .box naturally */
+	      /* optional: set a comfortable line-height for readability */
+	      line-height: 1.5;
+	    }
+
+	    /* small screens: stack the box above the text */
+	    @media (max-width: 780px) {
+	      .box {
+	        float: none;
+	        width: 80%;
+	        margin: 0 auto 1rem; /* center horizontally */
+	      }
+	    }
+	  </style>
 </head>
 
 <body>
@@ -92,57 +132,54 @@
 		<!-- Main -->
 		<div id="main">
 
-			<!-- One -->
-			<section id="one">
-				<div class="container">
+	      <!-- One -->
+	      <section id="one">
+	        <div class="container">
 
+	          <section class="flex">
+	            <!-- Move the aside BEFORE the textual content and float it so the following text wraps around it -->
+	            <aside class="box">
+	              <div id="profile-calendar-container">
+	                <picture>
+	                  <source type="image/avif" srcset="images/gallery/OnkenProfile.avif" />
+	                  <img src="images/gallery/OnkenProfile.png" alt="OnkenProfile" class="profile-img">
+	                </picture>
 
-					<section class="flex">
-					  	<div class="text">
+	                <div id="combined-calendar" role="img" aria-label="Combined GitHub contributions calendar">
+	                  <img id="combined-calendar-svg" src="./contribution_chart/gh-combined-calendar.svg" alt="donken contributions calendar">
+	                </div>
+	                <p style="text-align:center;"> Recent Contributions <a href="./github.html" class="icon brands fa-github" style="font-size: 1.3em; position: relative; bottom: -1px; color: #7c8081;" aria-label="link to Github profile"><span class="label">Github</span></a> </p>
+	              </div>
+	            </aside>
 
-					  	<h2>About</h2>
-						<p>I'm Derek Onken, a data scientist and machine learning researcher. I focus on data-intensive problems predominantly in the overlap of mathematics and computer science. Ultimately, I enjoy applying the theory to develop solutions for practical problems.</p>
+	            <div class="text">
+	              <h2>About</h2>
+	              <p>I'm Derek Onken, a data scientist and machine learning researcher. I focus on data-intensive problems predominantly in the overlap of mathematics and computer science. Ultimately, I enjoy applying the theory to develop solutions for practical problems.</p>
 
-						</br>
-	                    <p>(Such approaches include the following buzzwords: deep learning, neural networks, big data, statistical analysis, GPUs, numerical optimization, continuous normalizing flows, optimal control)</p>					    
+	              </br>
+	              <p>(Such approaches include the following buzzwords: deep learning, neural networks, big data, statistical analysis, GPUs, numerical optimization, continuous normalizing flows, optimal control)</p>
 
-						<h2> &nbsp; </h2>
+	              <h2> &nbsp; </h2>
 
-						<h2>Education</h2>
-						<ul style="list-style:none;">
-							<li style="margin-bottom: 20px;">
-								<p><b>Doctor of Philosophy - Emory University</b> <br/> Computer Science & Informatics track </p>
-							</li>
-							<li style="margin-bottom: 20px;">
-								<p><b>Master of Science - Emory University</b> <br/> Computer Science </p>
-							</li>
-							<li style="margin-bottom: 20px;">
-								<p><b>Bachelor of Science - University of Georgia</b>
-								<br/> Majors: Mathematics and Computer Science 
-								<br/> Minors: Physics and Classical Culture </p>
-							</li>
-						</ul>
+	              <h2>Education</h2>
+	              <ul style="list-style:none;">
+	                <li style="margin-bottom: 20px;">
+	                  <p><b>Doctor of Philosophy - Emory University</b> <br/> Computer Science & Informatics track </p>
+	                </li>
+	                <li style="margin-bottom: 20px;">
+	                  <p><b>Master of Science - Emory University</b> <br/> Computer Science </p>
+	                </li>
+	                <li style="margin-bottom: 20px;">
+	                  <p><b>Bachelor of Science - University of Georgia</b>
+	                    <br/> Majors: Mathematics and Computer Science
+	                    <br/> Minors: Physics and Classical Culture </p>
+	                </li>
+	              </ul>
+	            </div>
 
-
-					  	</div>
-					  	<aside class="box">
-					  	<div id="profile-calendar-container">
-						  <picture>
-						    <source type="image/avif" srcset="images/gallery/OnkenProfile.avif" />
-						    <img src="images/gallery/OnkenProfile.png" alt="OnkenProfile" class="profile-img">
-						  </picture>
-
-						  <div id="combined-calendar" role="img" aria-label="Combined GitHub contributions calendar">
-						    <img id="combined-calendar-svg" src="./contribution_chart/gh-combined-calendar.svg" alt="donken contributions calendar">
-						  </div>
-						  <p style="text-align:center;"> Recent Contributions <a href="./github.html" class="icon brands fa-github" style="font-size: 1.3em; position: relative; bottom: -1px; color: #7c8081;" aria-label="link to Github profile"><span class="label">Github</span></a> </p>
-						</div>
-						</aside>
-					</section> 
-
-
-				</div>
-			</section>
+	          </section>
+	        </div>
+	      </section>
 
 
 
