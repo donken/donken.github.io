@@ -1,0 +1,22 @@
+{
+  "name": "gh-contrib-aggregator",
+  "version": "1.0.0",
+  "description": "Aggregate GitHub contributions for multiple users and serve combined calendar (GraphQL)",
+  "main": "daily.js",
+  "scripts": {
+    "update-svg": "node daily.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.22.1",
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "license": "MIT"
+}
