@@ -160,53 +160,29 @@ function renderCalendarSVG(mergedPayload, usersLabel) {
   }
 
   // Month label SVG
-  // const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  // const monthKeys = Object.keys(monthPositions).sort();
-  // let monthLabelsSvg = '';
-  
-  // let lastX = -Infinity; // Track the X position of the last rendered label
-  // const minSpacing = 30; // Minimum pixel gap required to render a new label
-
-  // for (const mk of monthKeys) {
-  //   const [y, m] = mk.split('-');
-  //   const monthIndex = Number(m) - 1;
-  //   const label = monthNames[monthIndex];
-  //   const weekIndex = monthPositions[mk];
-    
-  //   const x = paddingLeft + padding + weekIndex * (rectSize + gap);
-  //   const textY = Math.max(12, paddingTop - 6);
-
-  //   // Only append SVG string if the current X is far enough from the last X
-  //   if (x - lastX >= minSpacing) {
-  //     monthLabelsSvg += `<text x="${x}" y="${textY}" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6a737d">${label}</text>\n`;
-  //     // monthLabelsSvg += `<text x="${textX}" y="${textY}" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#f0f6fc">${label}</text>\n`; //dark
-  //     lastX = x; // Update lastX only when a label is actually drawn
-  //   }
-  // }
-
-
   const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  // sort monthKeys chronologically
   const monthKeys = Object.keys(monthPositions).sort();
   let monthLabelsSvg = '';
+  
+  let lastX = -Infinity; // Track the X position of the last rendered label
+  const minSpacing = 30; // Minimum pixel gap required to render a new label
+
   for (const mk of monthKeys) {
     const [y, m] = mk.split('-');
     const monthIndex = Number(m) - 1;
     const label = monthNames[monthIndex];
     const weekIndex = monthPositions[mk];
+    
     const x = paddingLeft + padding + weekIndex * (rectSize + gap);
-    // Place month label slightly left of the column so it doesn't overlap the square
-    const textX = x;
     const textY = Math.max(12, paddingTop - 6);
-    monthLabelsSvg += `<text x="${textX}" y="${textY}" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6a737d">${label}</text>\n`;
-    // monthLabelsSvg += `<text x="${textX}" y="${textY}" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#f0f6fc">${label}</text>\n`; //dark
+
+    // Only append SVG string if the current X is far enough from the last X
+    if (x - lastX >= minSpacing) {
+      monthLabelsSvg += `<text x="${x}" y="${textY}" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6a737d">${label}</text>\n`;
+      // monthLabelsSvg += `<text x="${textX}" y="${textY}" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#f0f6fc">${label}</text>\n`; //dark
+      lastX = x; // Update lastX only when a label is actually drawn
+    }
   }
-
-
-
-
-
-
 
 
   // Weekday labels SVG (left side)
